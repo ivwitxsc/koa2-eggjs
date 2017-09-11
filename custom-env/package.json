@@ -4,7 +4,8 @@
   "description": "custom environment",
   "private": true,
   "dependencies": {
-    "egg": "^1.0.0-rc.1"
+    "egg": "^1.7.0",
+    "egg-scripts": "^1.1.1"
   },
   "devDependencies": {
     "autod": "^2.7.1",
@@ -19,7 +20,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "egg-bin dev",
-    "prd": "set EGG_SERVER_ENV=prod && npm start",
+    "prd": "cross-env EGG_SERVER_ENV=prod && egg-scripts start",
     "test": "egg-bin test",
     "autod": "autod"
   }
